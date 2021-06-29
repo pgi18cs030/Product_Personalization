@@ -1,0 +1,1 @@
+web: gunicorn user_offer_attraction.wsgi

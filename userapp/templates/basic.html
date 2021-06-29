@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>{% block title %} {% endblock %}</title>
+    <script src="{% static 'js/script.js' %}"></script>
+
+
+</head>
+<body style="background-color : Black;">
+
+<div class="marquee1">
+    <marquee behavior="scroll" direction="left" style="font-size : 3em; color : orange; margin-top : 12px; font-family : Times And Roman;"><b>Product Personalization</b></marquee>
+</div>
+<div style="margin-left : 10%;">
+
+    <form action="{% url 'result' %}" method="post">
+        <div style="font-size : 23px;">
+            <div  class="radio" style="color : white; font-family : Times And Roman;">
+              <label><input style="position : relative;"  id="cc" type="radio" value= "{% block value %} {% endblock %}" name="optradio"  onclick="myFunction()" required>&Tab;{% block input %} {% endblock %}</label>
+            </div>
+            <div class="radio"   style="color : white; font-family : Times And Roman;">
+              <label><input style="position : relative;" id="sc" type="radio" name="optradio"  value= "{% block value1 %} {% endblock %}" onclick="myFunction()" required>&Tab;{% block input1 %} {% endblock %}</label>
+            </div>
+            <div class="radio" style="color : white; font-family : Times And Roman;">
+              <label><input style="position : relative;" id="ss" type="radio" name="optradio" value= "{% block value2 %} {% endblock %}" onclick="myFunction()" required>&Tab;{% block input2 %} {% endblock %}</label>
+            </div>
+        </div>
+
+        {% csrf_token %}
+        <div class="container" id="text" style="display:none">
+            <ol>
+            {% for row in data1 %}
+
+                <li style="font-family : Times And Roman; color : red; font-size : 18px;">
+                    <label style="color : white; "><input  value="{{row}}" id="{{row}}data1s" name="brand" type="checkbox" onclick="anyCheckbox{{ row }}()">&Tab; {{row}}</label>
+                    <div>
+                        <select name="price" id="{{row}}data1" style="display:none">
+                            <option value="0">Select price:</option>
+                            {% for i in data4 %}
+                                <option value="{{i}}"> {{i}}</option>
+                            {% endfor %}
+                        </select>
+                         <label style="margin-top : 5px;"><input name="quantity" type="number" id="{{row}}data1q" style="display:none" placeholder="Quantity"></label>
+                        <script>
+                            function anyCheckbox{{ row }}()
+                            {
+                                var checkBox = document.getElementById("{{row}}data1s");
+                                var {{row}}data1t=document.getElementById("{{row}}data1");
+                                var {{row}}data1tq=document.getElementById("{{row}}data1q");
+
+                                if(checkBox.checked==true){
+                                    {{row}}data1t.style.display = "block";
+                                    {{row}}data1tq.style.display = "block";
+                                 }
+                                else{
+                                    {{row}}data1t.style.display = "none";
+                                    {{row}}data1tq.style.display = "none";
+                                }
+                            }
+                        </script>
+
+                    </div>
+                </li>
+             {% endfor %}
+            </ol>
+        </div>
+        <div class="container" id="text1" style="display:none">
+            <ol>
+            {% for row in data2 %}
+
+                <li style="font-family : Times And Roman; color : red; font-size : 18px;">
+                    <label style="color : white;"><input  value="{{row}}" id="{{row}}data2s" name="brand" type="checkbox" onclick="anyCheckbox{{ row }}()">&Tab; {{row}}</label>
+                    <div>
+                        <select name="price" id="{{row}}data2" style="display:none">
+                            <option value="0">Select price:</option>
+                            {% for i in data4 %}
+                                <option value="{{i}}"> {{i}}</option>
+                            {% endfor %}
+                        </select>
+                         <label style="margin-top : 5px;"><input name="quantity" type="number" id="{{row}}data2q" style="display:none" placeholder="Quantity"></label>
+                        <script>
+                            function anyCheckbox{{ row }}()
+                            {
+                                var checkBox = document.getElementById("{{row}}data2s");
+                                var {{row}}data1t=document.getElementById("{{row}}data2");
+                                var {{row}}data1tq=document.getElementById("{{row}}data2q");
+
+                                if(checkBox.checked==true){
+                                    {{row}}data1t.style.display = "block";
+                                    {{row}}data1tq.style.display = "block";
+                                 }
+                                else{
+                                    {{row}}data1t.style.display = "none";
+                                    {{row}}data1tq.style.display = "none";
+                                }
+                            }
+                        </script>
+
+                    </div>
+                </li>
+             {% endfor %}
+            </ol>
+        </div>
+        <div class="container" id="text2" style="display:none">
+            <ol>
+            {% for row in data3 %}
+
+                <li style="font-family : Times And Roman; color : red; font-size : 18px;">
+                    <label style="color : white;"><input  value="{{row}}" id="{{row}}data3s" name="brand" type="checkbox" onclick="anyCheckbox{{ row }}()">&Tab; {{row}}</label>
+                    <div>
+                        <select name="price" id="{{row}}data3" style="display:none">
+                            <option value="0">Select price:</option>
+                            {% for i in data4 %}
+                                <option value="{{i}}"> {{i}}</option>
+                            {% endfor %}
+                        </select>
+                         <label style="margin-top : 5px;"><input name="quantity" type="number" id="{{row}}data3q" style="display:none" placeholder="Quantity"></label>
+                        <script>
+                            function anyCheckbox{{ row }}()
+                            {
+                                var checkBox = document.getElementById("{{row}}data3s");
+                                var {{row}}data1t=document.getElementById("{{row}}data3");
+                                var {{row}}data1tq=document.getElementById("{{row}}data3q");
+
+                                if(checkBox.checked==true){
+                                    {{row}}data1t.style.display = "block";
+                                    {{row}}data1tq.style.display = "block";
+                                 }
+                                else{
+                                    {{row}}data1t.style.display = "none";
+                                    {{row}}data1tq.style.display = "none";
+                                }
+                            }
+                        </script>
+
+                    </div>
+                </li>
+             {% endfor %}
+            </ol>
+        </div>
+
+
+        <button type="submit">Prediction</button>
+    </form>
+
+</div>
+</body>
+</html>

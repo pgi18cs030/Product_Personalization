@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Result</title>
+	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+
+</head>
+<body style="background-color : Black;">
+
+<div class="marquee1">
+    <marquee behavior="scroll" direction="left" style="font-size : 3em; color : orange; margin-top : 12px; font-family : Times And Roman;"><b>Product Personalization</b></marquee>
+<div class="container" style="color : white; margin-top : 50px; font-family : Times And Roman;">
+  <table class="table table-dark">
+    <thead>
+      <tr style="font-size : 20px; color : red;">
+        <th>Sub_category</th>
+        <th>Brand</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Offer</th>
+      </tr>
+    </thead>
+    <tbody>
+    <!-- jinja2 Technique -->
+    {% if d %}
+    {% for i in d %}
+      <tr>
+        <td>{{i.Sub_category}}</td>
+        <td>{{i.Brand}}</td>
+        <td>{{i.Price}}</td>
+        <td>{{i.Quantity}}</td>
+        <td>{{i.Offer}}</td>
+      </tr>
+    {% endfor %}
+    {% endif %}
+    </tbody>
+  </table>
+</div>
+</div>
+</body>
+</html>
