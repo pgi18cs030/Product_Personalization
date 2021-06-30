@@ -40,7 +40,7 @@ def footwear(request):
                'data2': ['Uber_Urb', 'Fairdea', 'REEBOK_CLASSI', 'Footprin', 'BlueSha',
                          'ModeWa', 'RRENTERPRI', 'EverLa', 'Truemo', 'SORA', 'GLO',
                          'Jai_Textil', 'Bonnevil', 'Jagdish_Garmen'],
-               'data3': ['Mo', 'Solid_Styl', 'HUMBE', 'HaltonHil', 'NEXT', 'East_I',
+               'data3': ['Mo', 'Solid_Styl', 'HUMBE', 'HaltonHil', 'East_I',
                           'JACK_AND_HAR', 'Pol', 'The_Arch', 'SUR', 'V', 'Clo', 'Inspi',
                           'ABC_ANY_BUDY_CLE', 'TOM_BU'],
                'data4': [x for x in range(500, 5000, 10)]
