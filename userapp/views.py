@@ -25,8 +25,8 @@ def cloths(request):
                          'Szto', 'NEBRAS', 'SayItLo', 'KAY_D', 'ATHL', 'Byford_by_Pantaloo',
                          'Mohr', 'AS_Tre', 'Flyer'],
                'data3' :['LDHSA', 'Marca_Disa', 'Vector', 'Bone', 'limited_colou', 'TeeMoo',
-                         'MR_FASHI', 'Steenb', 'Asa', 'THE_HOLLAND', 'FASHION_WOU',
-                         'US_POLO_Associati', 'A_J_STYL', 'CANTAB'],
+                         'MR_FASHI', 'Steenb', 'Asa', 'The_HOLLAND', 'FASHION_WOU',
+                         'US_POLO_Associati', 'A_J_Styl', 'CANTAB'],
                'data4' :[x for x in range(500,5000,10)]
                 }
     return render(request,'cloths.html',context)
