@@ -2,6 +2,50 @@ function myFunction() {
   var checkBox = document.getElementById("cc");
   var checkBox1 = document.getElementById("sc");
   var checkBox2 = document.getElementById("ss");
+  var text = document.getElementById("text");
+  var text1 = document.getElementById("text1");
+  var text2 = document.getElementById("text2");
+  if (checkBox.checked == true){
+
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+  if (checkBox1.checked == true){
+
+    text1.style.display = "block";
+  } else {
+     text1.style.display = "none";
+  }
+  if (checkBox2.checked == true){
+
+    text2.style.display = "block";
+  } else {
+     text2.style.display = "none";
+  }
+}
+function myFunction1() {
+  var checkBox = document.getElementById("cc");
+  var checkBox1 = document.getElementById("sc");
+  var text = document.getElementById("text");
+  var text1 = document.getElementById("text1");
+  if (checkBox.checked == true){
+
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+  if (checkBox1.checked == true){
+
+    text1.style.display = "block";
+  } else {
+     text1.style.display = "none";
+  }
+}
+function myFunction2() {
+  var checkBox = document.getElementById("cc");
+  var checkBox1 = document.getElementById("sc");
+  var checkBox2 = document.getElementById("ss");
   var checkBox3 = document.getElementById("pp");
   var text = document.getElementById("text");
   var text1 = document.getElementById("text1");
@@ -32,6 +76,7 @@ function myFunction() {
      text3.style.display = "none";
   }
 }
+
 
 function anyCheckbox()
 {
