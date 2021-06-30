@@ -33,9 +33,9 @@ def cloths(request):
 
 
 def footwear(request):
-    context = {'data1': ['Zack_Fo', 'Mett', 'DISCOUNT_OUTL', 'allan_pet', 'MagMatri',
+    context = {'data1': ['ZACK_Fo', 'Mett', 'DISCOUNT_OUTL', 'allan_pet', 'MagMatri',
                          'SEVN', 'LIVST', 'saltla', 'Man', 'Cots', 'adidas_Origina',
-                         'Crocks_Cl', 'BLACKSN', 'Lafant', 'RodZ', 'PROLI', 'Lucky_Bi',
+                         'Crocks_Cl', 'BlackSN', 'Lafant', 'RodZ', 'PROLI', 'Lucky_Bi',
                          'MASH_UNLIMIT'],
                'data2': ['Uber_Urb', 'Fairdea', 'REEBOK_CLASSI', 'Footprin', 'BlueSha',
                          'ModeWa', 'RRENTERPRI', 'EverLa', 'Truemo', 'SORA', 'GLO',
