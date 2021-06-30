@@ -62,7 +62,7 @@ def cosmetic(request):
 
 def bags(request):
     context = {'data1': ['Oka', 'Wildst', 'True_Bl', 'vims_rai', 'Shoef', 'Simon_Rob',
-                         'USPolo_As', 'USPOLO_ASS', 'Breakboun'],
+                         'US_Polo_As', 'US_POLO_ASS', 'Breakboun'],
                'data2': ['Gracew', 'REEB', 'Free_Authori', 'Dudli', 'Pu', 'A', 'PixF'],
                'data4': [x for x in range(500, 5000, 10)]
                }
